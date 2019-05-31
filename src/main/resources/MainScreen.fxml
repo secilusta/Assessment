@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane stylesheets="@application.css" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
+    <Button layoutX="307.0" layoutY="14.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#restartGame" prefHeight="35.0" prefWidth="70.0" text="Restart" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0" />
+      <GridPane layoutX="5.0" layoutY="55.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="464.0" prefWidth="423.0" stylesheets="@application.css" AnchorPane.bottomAnchor="45.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="45.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints fillHeight="false" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="20.0" vgrow="NEVER" />
+          <RowConstraints vgrow="SOMETIMES" />
+        </rowConstraints>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="yellowText" text="User Guesses">
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="5.0" top="5.0" />
+               </GridPane.margin>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="yellowText" text="PC Guesses" GridPane.columnIndex="1">
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin>
+            </Text>
+            <ListView fx:id="userGuessListView" focusTraversable="false" mouseTransparent="true" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" />
+               </GridPane.margin>
+            </ListView>
+            <ListView fx:id="pcGuessListView" focusTraversable="false" mouseTransparent="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" />
+               </GridPane.margin>
+            </ListView>
+      </GridPane>
+      <HBox layoutX="33.0" layoutY="504.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0">
+          <TextField fx:id="inputTextField" alignment="CENTER" layoutX="33.0" layoutY="68.0" onKeyPressed="#triggerSendButtonFromTextField" prefHeight="35.0" prefWidth="280.0" promptText="Enter input..." AnchorPane.bottomAnchor="15.0" HBox.hgrow="SOMETIMES">
+               <HBox.margin>
+                  <Insets right="25.0" />
+               </HBox.margin>
+            </TextField>
+          <Button fx:id="sendButton" layoutX="322.0" layoutY="69.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="35.0" prefWidth="70.0" text="Send!" AnchorPane.bottomAnchor="15.0">
+            <cursor>
+              <Cursor fx:constant="HAND" />
+            </cursor>
+               <HBox.margin>
+                  <Insets right="5.0" />
+               </HBox.margin>
+            </Button>
+      </HBox>
+</AnchorPane>

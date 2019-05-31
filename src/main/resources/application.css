@@ -1,0 +1,30 @@
+.root {
+     -fx-font-size: 12px;
+     -fx-font-family: sans-serif;
+     -fx-background-color: #356483;
+ }
+.button {
+    -fx-background-color:
+        linear-gradient(to top left, #FF9E3C, #FFCB6B),
+        linear-gradient(from 0% 0% to 15% 50%, rgba(255,255,255,0.8), rgba(255,255,255,0));
+    -fx-background-insets: 0;
+    -fx-text-fill: black;
+}
+.list-view {
+    -fx-background-color: #D4DEE4;
+    -fx-background-insets: 0 ;
+}
+.list-cell:odd {
+    -fx-background-color: #D4DEE4;
+}
+.list-cell:even {
+    -fx-background-color: #BEC7CD;
+}
+.focusList {
+    -fx-border-color: #F7FA1B;
+    -fx-border-width: 2;
+    -fx-border-insets: -1 ;
+}
+.yellowText {
+ -fx-fill: #F7FA1B;
+ }
